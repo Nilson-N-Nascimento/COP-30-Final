@@ -3,6 +3,7 @@ import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Separator } from "../../components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 // Define attraction data for mapping
 const attractions = [
@@ -124,6 +125,8 @@ const contactInfo = [
 ];
 
 export const Desktop = (): JSX.Element => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white min-h-screen w-full">
       <div className="w-full relative">
@@ -159,6 +162,7 @@ export const Desktop = (): JSX.Element => {
             <Button
               className="w-[126px] h-[39px] bg-[#4A3AFF] hover:bg-[#3929FF] text-white rounded-md"
               variant="default"
+              onClick={() => navigate("/cadastro")}
             >
               CADASTRO
             </Button>
